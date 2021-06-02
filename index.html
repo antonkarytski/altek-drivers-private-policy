@@ -20,7 +20,7 @@
 
 <div class="page">
   <section>
-    <div class="en section_container" section-language="en">
+    <div class="en section_container active" section-language="en">
       <div id="md_en" data-target="out_en" class="agreement_md"><h1>Privacy Policy</h1>
         <p>Last updated: June 02, 2021</p>
         <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
@@ -201,37 +201,6 @@
 	window.LCG_TRACKING_APPLICATION = "freeprivacypolicy-livelink";
 	window.LCG_TRACKING_ENVIRONMENT = "production";
 	window.LCG_TRACKING_EPOCH = "2020-e01";
-</script>
-	<script type="text/javascript" defer>
-	$(document).ready(function () {
-		let language_label = $('.language_label');
-		function selectFirstLanguage() {
-			language_label.each(function(index, element) {
-				let language = $(element).attr('label-language');
-				selectLanguage('en');
-				return false;
-			});
-		}
-		// Language selection function
-		function selectLanguage(language) {
-			language_label.removeClass('active');
-			$('.section_container').removeClass('active');
-
-			$(".language_label[label-language='" + language +"']").addClass('active');
-			$(".section_container[section-language='" + language +"']").addClass('active');
-
-			$("html, body").animate({scrollTop: 0}, "slow");
-		}
-		// Automatically select the first language
-		selectFirstLanguage();
-
-		$('.language_label').click(function () {
-			language_label.click(function () {
-				var labelLanguage = $(this).attr('label-language');
-				selectLanguage(labelLanguage);
-			});
-		});
-	});
 </script>
 <script src="/track/v1/r/js-code" type="text/javascript" async="true"></script>
 <script src="/track/v1/r/js-data" type="text/javascript" async="true"></script>
